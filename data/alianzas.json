@@ -1,0 +1,34 @@
+{
+  "alianzas": [
+    {
+      "id": "defensores-imperiales",
+      "nombre": "Fuerzas Operación Imperator",
+      "jugadores": [
+        {
+          "foto": "assets/5dc8ecbf-df2d-4369-84dc-09c0ae8276c0.png",
+          "nombreFuerza": "Operación Imperator",
+          "miembros": [
+            "Astra Militarum — 256.ª de Cadia",
+            "Ángeles Oscuros — 3º compañía",
+            "Caballeros Imperiales — Lanza Juramentada"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "invasores-xenos",
+      "nombre": "Invasores Xenos",
+      "jugadores": [
+        {
+          "foto": "assets/474e3070-02cf-4ad1-8856-fe47de1bbb12.png",
+          "nombreFuerza": "Gran Waaagh! de Armageddon",
+          "miembros": [
+            "Orkos — Velociwaaagh! del Colmillo",
+            "Orkos — Waaagh! del Colmillo",
+            "Orkos — Waaagh! de Ghazkull"
+          ]
+        }
+      ]
+    }
+  ]
+}

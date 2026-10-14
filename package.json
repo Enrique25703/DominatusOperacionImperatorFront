@@ -1,0 +1,11 @@
+{
+  "name": "dominatus-campaign-viewer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Visor estático de la campaña Dominatus",
+  "scripts": {
+    "sectors:index": "node generate-sectors.js",
+    "build:pages": "node build-pages.js",
+    "start": "node generate-sectors.js && node server.js"
+  }
+}

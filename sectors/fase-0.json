@@ -1,0 +1,293 @@
+{
+  "fase": 0,
+  "nombre": "Fase 0 (Tormenta antes de la tempestad)",
+  "visible": true,
+  "sectores": [
+    {
+  "id": "linea-morfeon",
+  "etiqueta": "La Línea Morfeón",
+  "nombre": "La Línea Morfeón",
+  "tipo": "Zona fortificada",
+  "power": 0,
+  "slots": 0,
+  "control": "orkos",
+  "Activo": false,
+  "informacion": "Una formidable red de trincheras y fortificaciones, la Línea Morfeón se construyó originalmente para contener a los Orkos que asaltaban la Colmena Tempestora.",
+  "reglasTerreno": [
+    {
+      "nombre": "Redes de defensa",
+      "regla": "Mientras una unidad se beneficie de cobertura, las miniaturas de esa unidad tienen una S Inv de 5+ contra ataques a distancia."
+    },
+    {
+      "nombre": "Trinchera",
+      "regla": "Cuando una unidad INFANTERÍA permanece inmóvil, las miniaturas ocultas de esa unidad tienen un alcance de detección de 12\" hasta el final del turno."
+    }
+  ],
+  "bonificacionVictoria": "Mientras una alianza tenga el control de esta localización, cuando un jugador de esa alianza robe tarjetas de honor de batalla, puede robar 1 tarjeta adicional antes de elegir cuál se queda.",
+  "enfrentamientos": [],
+  "puntos": [
+    [14.4, 18.2],
+    [19.4, 14.0],
+    [23.0, 14.0],
+    [28.7, 18.7],
+    [33.0, 16.5],
+    [36.3, 16.5],
+    [39.8, 21.2],
+    [45.2, 19.5],
+    [46.1, 21.6],
+    [45.9, 26.0],
+    [43.2, 31.2],
+    [34.7, 35.0],
+    [29.0, 30.2],
+    [22.5, 26.8],
+    [14.6, 20.6]
+  ]
+},
+    {
+  "id": "archipielago-volcanus",
+  "etiqueta": "Archipiélago Volcanus",
+  "nombre": "Archipiélago Volcanus",
+  "tipo": "Archipiélago",
+  "power": 0,
+  "slots": 0,
+  "control": "orkos",
+  "Activo": false,
+  "informacion": "Situadas en el estuario del río Erebus, las islas del Archipiélago Volcanus están repletas de baterías antiaéreas y estaciones navales de paso, protegiendo el norte de la Colmena Volcanus.",
+  "reglasTerreno": [
+    {
+      "nombre": "Nave de desembarco",
+      "regla": "En la fase de movimiento de un jugador, ese jugador puede elegir 1 unidad amiga en reservas estratégicas. Esa unidad puede hacer un movimiento de inserción en esta fase como si el número de la ronda de batalla fuese 1 punto mayor (es decir, podría llegar en la 1ª ronda de batalla)."
+    },
+    {
+      "nombre": "Refuerzos rápidos",
+      "regla": "(1 vez por batalla) Cada jugador puede usar la estratagema Inserción rápida por 0PM."
+    }
+  ],
+  "bonificacionVictoria": "Mientras una alianza tenga el control de esta localización, cuando un jugador de esa alianza robe tarjetas de reliquia, puede robar 1 tarjeta adicional antes de elegir cuál se queda.",
+  "enfrentamientos": [],
+  "puntos": [
+    [18.2, 27.8],
+    [22.5, 26.8],
+    [29.0, 30.2],
+    [34.7, 35.0],
+    [33.4, 41.1],
+    [28.6, 49.4],
+    [20.1, 54.6],
+    [14.3, 56.1],
+    [16.4, 49.9],
+    [13.8, 37.1],
+    [15.5, 31.8]
+  ]
+},
+    {
+  "id": "grieta-manheim",
+  "etiqueta": "La Grieta de Mannheim",
+  "nombre": "La Grieta de Mannheim",
+  "tipo": "Paso montañoso",
+  "power": 0,
+  "slots": 0,
+  "control": "Disputado",
+  "Activo": false,
+  "informacion": "Atravesando la cordillera al oeste de la Colmena Volcanus, la Grieta de Mannheim ha sido escenario de innumerables batallas cuyos restos obstruyen el paso. Los guerreros que luchan aquí lo hacen entre desfiladeros, con la amenaza de un derrumbe letal constantemente sobre sus cabezas.",
+  "reglasTerreno": [
+    {
+      "nombre": "Paredes de desfiladero",
+      "regla": "Los bordes del campo de batalla que no sean ni el del atacante ni el del defensor son paredes de desfiladero. Cuando una unidad haga un movimiento de inserción, sus miniaturas no pueden desplegarse a 6\" o menos de una pared de desfiladero si la miniatura no tiene VOLAR o Despliegue rápido."
+    },
+    {
+      "nombre": "Caen rocas",
+      "regla": "Cuando una unidad termine un movimiento (salvo agruparse y consolidar) a 6\" o menos de una pared de desfiladero, haz una tirada de riesgo para esa unidad."
+    }
+  ],
+  "bonificacionVictoria": "Mientras una alianza tenga el control de esta localización, cuando un jugador de esa alianza robe tarjetas de habilidad de batalla, puede robar 1 tarjeta adicional antes de elegir cuál se queda.",
+  "enfrentamientos": [],
+  "puntos": [
+    [34.7, 35.0],
+    [43.2, 31.2],
+    [45.9, 26.0],
+    [48.6, 24.0],
+    [53.3, 22.9],
+    [54.1, 24.6],
+    [53.9, 27.7],
+    [48.5, 34.2],
+    [48.1, 42.2],
+    [46.6, 46.1],
+    [44.0, 44.7],
+    [40.0, 47.8],
+    [35.3, 54.0],
+    [29.8, 54.2],
+    [28.6, 49.4],
+    [33.4, 41.1]
+  ]
+},
+    {
+      "id": "espacio-puerto",
+      "etiqueta": "Espaciopuerto Victorinius",
+      "nombre": "Espacio Puerto",
+      "tipo": "Puerto espacial",
+      "power": 0,
+      "slots": 0,
+      "control": "imperiales",
+      "Activo": false,
+      "informacion": "Zona insular del Espacio Puerto en el norte del mapa.",
+      "reglasTerreno": [],
+      "bonificacionVictoria": { "imperiales": "", "orkos": "" },
+      "enfrentamientos": [],
+      "puntos": [
+        [61.5, 18.1],
+        [65.5, 18.1],
+        [68.8, 19.1],
+        [70.2, 21.2],
+        [69.7, 23.4],
+        [70.5, 25.2],
+        [68.8, 26.7],
+        [65.4, 26.8],
+        [61.3, 26.3],
+        [60.9, 23.0]
+      ]
+    },
+    {
+      "id": "titanes",
+      "etiqueta": "Tumba de titanes",
+      "nombre": "Titanes",
+      "tipo": "Sector estratégico",
+      "power": 0,
+      "slots": 0,
+      "control": "imperiales",
+      "Activo": false,
+      "informacion": "Franja septentrional situada al este del Espacio Puerto.",
+      "reglasTerreno": [],
+      "bonificacionVictoria": { "imperiales": "", "orkos": "" },
+      "enfrentamientos": [],
+      "puntos": [
+        [71.9, 29.4],
+        [75.1, 28.1],
+        [78.6, 26.3],
+        [81.7, 24.7],
+        [84.3, 22.1],
+        [85.6, 22.0],
+        [86.8, 28.3],
+        [84.5, 31.6],
+        [82.8, 31.5],
+        [79.4, 32.8],
+        [75.4, 35.3]
+      ]
+    },
+    {
+      "id": "acheron",
+      "etiqueta": "Acheron",
+      "nombre": "Subzonas de la colmena Acheron",
+      "tipo": "Sector estratégico",
+      "power": 0,
+      "slots": 0,
+      "control": "imperiales",
+      "Activo": false,
+      "informacion": "Territorio al sur de Titanes, en el extremo oriental.",
+      "reglasTerreno": [],
+      "bonificacionVictoria": { "imperiales": "", "orkos": "" },
+      "enfrentamientos": [],
+      "puntos": [
+        [79.4, 33.3],
+        [82.8, 32.0],
+        [84.5, 31.8],
+        [87.6, 34.6],
+        [89.2, 38.8],
+        [88.9, 40.8],
+        [86.5, 44.3],
+        [80.8, 43.1],
+        [79.0, 38.4],
+        [78.3, 36.9]
+      ]
+    },
+    {
+      "id": "observatorio",
+      "etiqueta": "Observatorio Los Ojos del Emperador",
+      "nombre": "Observatorio",
+      "tipo": "Observatorio",
+      "power": 0,
+      "slots": 0,
+      "control": "imperiales",
+      "Activo": false,
+      "informacion": "Área montañosa del Observatorio en el centro oriental.",
+      "reglasTerreno": [],
+      "bonificacionVictoria": { "imperiales": "", "orkos": "" },
+      "enfrentamientos": [],
+      "puntos": [
+        [63.3, 35.6],
+        [66.5, 32.5],
+        [70.3, 34.4],
+        [72.2, 40.4],
+        [74.4, 47.1],
+        [76.2, 52.1],
+        [71.4, 54.4],
+        [67.9, 51.1],
+        [65.2, 46.4],
+        [63.0, 41.0],
+        [63.3, 38.1]
+      ]
+    },
+    {
+      "id": "base-cerbera",
+      "etiqueta": "Base Cerbera",
+      "nombre": "Base Cerbera",
+      "tipo": "Base",
+      "power": 0,
+      "slots": 0,
+      "control": "imperiales",
+      "Activo": false,
+      "informacion": "Base Cerbera y su entorno en la región central.",
+      "reglasTerreno": [],
+      "bonificacionVictoria": { "imperiales": "", "orkos": "" },
+      "enfrentamientos": [],
+      "puntos": [
+        [48.1, 42.2],
+        [48.5, 37.5],
+        [53.1, 34.4],
+        [59.0, 30.9],
+        [62.6, 33.9],
+        [63.1, 37.7],
+        [61.0, 45.0],
+        [62.3, 55.1],
+        [60.0, 60.1],
+        [63.5, 68.0],
+        [58.2, 71.1],
+        [51.5, 67.7],
+        [51.5, 64.2],
+        [52.3, 60.5],
+        [51.8, 56.8],
+        [51.9, 51.2],
+        [50.8, 46.8]
+      ]
+    },
+    {
+      "id": "pozos-letales",
+      "etiqueta": "Pozos Letales de Fuegonegro",
+      "nombre": "Pozos Letales",
+      "tipo": "Zona montañosa",
+      "power": 0,
+      "slots": 0,
+      "control": "imperiales",
+      "Activo": false,
+      "informacion": "Pozos Letales en las montañas de la región meridional.",
+      "reglasTerreno": [],
+      "bonificacionVictoria": { "imperiales": "", "orkos": "" },
+      "enfrentamientos": [],
+      "puntos": [
+        [48.1, 42.2],
+        [50.8, 46.8],
+        [51.9, 51.2],
+        [51.8, 56.8],
+        [49.4, 66.1],
+        [47.5, 66.4],
+        [41.6, 61.1],
+        [38.7, 60.6],
+        [33.4, 62.2],
+        [32.8, 60.2],
+        [35.3, 54.0],
+        [40.0, 47.8],
+        [44.0, 44.7],
+        [46.6, 46.1]
+      ]
+    }
+  ]
+}
