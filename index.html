@@ -171,7 +171,7 @@ body{min-height:100vh;padding:20px}
 }
 .sector-picker select:focus-visible{outline:2px solid #dfffee;outline-offset:2px}
 .view[hidden]{display:none!important}
-.alliances-view{
+.alliances-view,.characters-view{
   border:1px solid var(--border);border-radius:8px;padding:clamp(18px,3vw,34px);
   background:
     linear-gradient(rgba(3,18,12,.9),rgba(2,10,7,.96)),
@@ -218,6 +218,29 @@ body{min-height:100vh;padding:20px}
 .alliances-message{
   border:1px dashed var(--border);padding:22px;border-radius:8px;color:#9ed0b8;text-align:center
 }
+.characters-container{display:grid;gap:30px}
+.character-alliance{--character-accent:var(--cyan);border-top:1px solid rgba(135,255,208,.32);padding-top:18px}
+.character-alliance[data-alliance="orka"]{--character-accent:#b5ff75;border-top-color:rgba(181,255,117,.32)}
+.character-alliance-heading{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:14px}
+.character-alliance-heading h2{margin:0;font-size:clamp(20px,3vw,27px);color:var(--character-accent)}
+.character-list{display:grid;gap:12px}
+.character-card{overflow:hidden;border:1px solid rgba(135,255,208,.24);border-radius:8px;background:rgba(4,24,16,.82);box-shadow:inset 0 0 28px rgba(61,255,162,.025);transition:border-color .16s ease}
+.character-card:hover,.character-card[open]{border-color:var(--character-accent)}
+.character-summary{display:grid;grid-template-columns:112px minmax(0,1fr) 22px;gap:20px;align-items:center;min-height:136px;padding:12px 20px 12px 12px;cursor:pointer;list-style:none}
+.character-summary::-webkit-details-marker{display:none}
+.character-summary:focus-visible{outline:2px solid #dfffee;outline-offset:-3px}
+.character-photo{display:block;width:112px;height:112px;object-fit:cover;object-position:center 35%;border:1px solid rgba(135,255,208,.35);border-radius:5px;background:#07170f}
+.character-summary-text{min-width:0}
+.character-summary-name{display:block;color:#ecfff5;font-size:clamp(20px,2.5vw,27px);font-weight:750;line-height:1.2}
+.character-rank,.character-faction{display:block;margin-top:5px;color:#9ed0b8;font-size:13px;line-height:1.35}
+.character-faction{margin-top:2px;color:#78b697}
+.character-chevron{width:11px;height:11px;border-right:2px solid var(--character-accent);border-bottom:2px solid var(--character-accent);transform:rotate(45deg);transition:transform .16s ease}
+.character-card[open] .character-chevron{transform:rotate(225deg)}
+.character-details{display:grid;gap:20px;padding:20px 24px 24px;border-top:1px solid rgba(135,255,208,.2)}
+.character-card:not([open]) .character-details{display:none}
+.character-details h3{margin:0 0 8px;color:#85ddb5;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.character-details p{margin:0;color:#bcebd1;font-size:14px;line-height:1.65}
+.character-details ul{margin:0;padding-left:19px;color:#bcebd1;font-size:14px;line-height:1.55}
 @media(max-width:900px){
   .viewer{grid-template-columns:1fr}
   .status{width:100%;margin-left:0}
@@ -244,14 +267,19 @@ body{min-height:100vh;padding:20px}
   .side{min-height:0;padding:14px}
   .encounter{grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr)}
   .legend{gap:8px;font-size:11px}
-  .alliance-heading{align-items:start;flex-direction:column;gap:5px}
+   .alliance-heading,.character-alliance-heading{align-items:start;flex-direction:column;gap:5px}
   .force-card{grid-template-columns:70px minmax(0,1fr)}
   .force-photo{width:70px;height:88px}
+   .character-summary{grid-template-columns:76px minmax(0,1fr) 14px;gap:12px;min-height:100px;padding:10px}
+   .character-photo{width:76px;height:76px}
+   .character-summary-name{font-size:19px}
+   .character-rank,.character-faction{font-size:12px}
+   .character-details{padding:18px}
 }
 @media(prefers-reduced-motion:reduce){
   .scan,.sector-polygon.control-disputado{animation:none}
   .sector-polygon.control-disputado{fill:rgba(255,147,49,.45);stroke:#ffad58}
-  .map-stage,.sector-label{transition:none}
+   .map-stage,.sector-label,.character-chevron{transition:none}
 }
 </style>
 </head>
@@ -261,6 +289,7 @@ body{min-height:100vh;padding:20px}
     <nav class="tabs" role="tablist" aria-label="Secciones de campaña">
       <button class="tab is-active" id="mapTab" type="button" role="tab" aria-selected="true" aria-controls="mapView" data-view="mapView">Mapa planetario</button>
       <button class="tab" id="alliancesTab" type="button" role="tab" aria-selected="false" aria-controls="alliancesView" data-view="alliancesView" tabindex="-1">Alianzas</button>
+      <button class="tab" id="charactersTab" type="button" role="tab" aria-selected="false" aria-controls="charactersView" data-view="charactersView" tabindex="-1">Personajes</button>
     </nav>
     <label class="phase-picker" for="phaseSelect">
       Fase
@@ -347,6 +376,16 @@ body{min-height:100vh;padding:20px}
       <div class="alliances-message">Cargando fuerzas registradas…</div>
     </div>
   </section>
+  <section class="view characters-view" id="charactersView" role="tabpanel" aria-labelledby="charactersTab" hidden>
+    <header class="alliances-intro">
+      <h1>Archivos de campaña</h1>
+      <p>Selecciona un personaje para consultar su biografía y sus batallas importantes.</p>
+      <div class="alliances-status" id="charactersStatus" aria-live="polite">Cargando archivo de personajes…</div>
+    </header>
+    <div class="characters-container" id="charactersContainer" aria-live="polite">
+      <div class="alliances-message">Cargando personajes registrados…</div>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -373,6 +412,8 @@ const sectorSelect = document.getElementById('sectorSelect');
 const tabButtons = Array.from(document.querySelectorAll('[role="tab"]'));
 const alliancesContainer = document.getElementById('alliancesContainer');
 const alliancesStatus = document.getElementById('alliancesStatus');
+const charactersContainer = document.getElementById('charactersContainer');
+const charactersStatus = document.getElementById('charactersStatus');
 let zoom = 1;
 let panX = 0;
 let panY = 0;
@@ -395,6 +436,7 @@ tabButtons.forEach((tab, index) => {
   tab.addEventListener('click', () => {
     selectView(tab);
     if (tab.dataset.view === 'alliancesView') loadAlliances();
+    if (tab.dataset.view === 'charactersView') loadCharacters();
     if (tab.dataset.view === 'mapView') loadPhases();
   });
   tab.addEventListener('keydown', event => {
@@ -404,6 +446,7 @@ tabButtons.forEach((tab, index) => {
     const nextTab = tabButtons[(index + direction + tabButtons.length) % tabButtons.length];
     selectView(nextTab);
     if (nextTab.dataset.view === 'alliancesView') loadAlliances();
+    if (nextTab.dataset.view === 'charactersView') loadCharacters();
     if (nextTab.dataset.view === 'mapView') loadPhases();
     nextTab.focus();
   });
@@ -961,10 +1004,112 @@ async function loadAlliances() {
   }
 }
 
+function renderCharacters(characters) {
+  const alliances = [
+    { id: 'imperial', name: 'Alianza Imperial' },
+    { id: 'orka', name: 'Alianza Orka' }
+  ];
+  charactersContainer.replaceChildren();
+  alliances.forEach(alliance => {
+    const members = characters.filter(character => character.alianza === alliance.id)
+      .sort((left, right) => left.nombre.localeCompare(right.nombre, 'es'));
+    const section = document.createElement('section');
+    section.className = 'character-alliance';
+    section.dataset.alliance = alliance.id;
+    const heading = document.createElement('header');
+    heading.className = 'character-alliance-heading';
+    heading.append(addTextElement('h2', '', alliance.name), addTextElement('span', 'alliance-count', `${members.length} ${members.length === 1 ? 'personaje' : 'personajes'}`));
+    section.append(heading);
+
+    const list = document.createElement('div');
+    list.className = 'character-list';
+    if (!members.length) list.append(addTextElement('div', 'alliances-message', 'Todavía no hay personajes registrados en esta alianza.'));
+    members.forEach(character => {
+      const card = document.createElement('details');
+      card.className = 'character-card';
+      const summary = document.createElement('summary');
+      summary.className = 'character-summary';
+      if (character.foto) {
+        const photo = document.createElement('img');
+        photo.className = 'character-photo';
+        photo.src = character.foto;
+        photo.alt = `Retrato de ${character.nombre}`;
+        photo.loading = 'lazy';
+        photo.addEventListener('error', () => photo.remove(), { once: true });
+        summary.append(photo);
+      }
+
+      const summaryText = document.createElement('span');
+      summaryText.className = 'character-summary-text';
+      summaryText.append(
+        addTextElement('span', 'character-summary-name', character.nombre),
+        addTextElement('span', 'character-rank', character.rango || 'Rango sin registrar'),
+        addTextElement('span', 'character-faction', character.faccion || 'Facción sin registrar')
+      );
+      summary.append(summaryText, addTextElement('span', 'character-chevron', ''));
+
+      const details = document.createElement('div');
+      details.className = 'character-details';
+      const biography = document.createElement('section');
+      biography.append(
+        addTextElement('h3', '', 'Biografía'),
+        addTextElement('p', '', character.biografia || 'Biografía pendiente de registro.')
+      );
+
+      const battles = document.createElement('section');
+      battles.append(addTextElement('h3', '', 'Batallas importantes'));
+      const records = Array.isArray(character.batallasImportantes) ? character.batallasImportantes : [];
+      if (records.length) {
+        const list = document.createElement('ul');
+        records.forEach(record => list.append(addTextElement('li', '', String(record))));
+        battles.append(list);
+      } else {
+        battles.append(addTextElement('p', '', 'Aún no hay registros notorios en la campaña.'));
+      }
+      details.append(biography, battles);
+      card.append(summary, details);
+      list.append(card);
+    });
+    section.append(list);
+    charactersContainer.append(section);
+  });
+
+  charactersStatus.textContent = `2 alianzas · ${characters.length} ${characters.length === 1 ? 'personaje' : 'personajes'}`;
+}
+
+async function loadCharacters() {
+  if (window.location.protocol === 'file:') {
+    charactersContainer.replaceChildren(addTextElement('div', 'alliances-message', 'Para leer los personajes ejecuta “npm.cmd start” y entra en http://localhost:4173.'));
+    charactersStatus.textContent = 'Servidor local necesario';
+    return;
+  }
+
+  try {
+    charactersStatus.textContent = 'Actualizando archivo de personajes…';
+    const indexResponse = await fetch('./characters/index.json', { cache: 'no-store' });
+    if (!indexResponse.ok) throw new Error(`Error HTTP ${indexResponse.status}`);
+    const index = await indexResponse.json();
+    const files = Array.isArray(index.personajes) ? index.personajes.filter(file => typeof file === 'string' && /^[\w-]+\.json$/.test(file)) : [];
+    const characters = await Promise.all(files.map(async file => {
+      const response = await fetch(`./characters/${file}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`No se pudo leer ${file} (${response.status})`);
+      return response.json();
+    }));
+    if (characters.some(character => !character || typeof character.nombre !== 'string' || !['imperial', 'orka'].includes(character.alianza))) throw new Error('Hay un personaje sin nombre o alianza válidos.');
+    renderCharacters(characters);
+  } catch (error) {
+    charactersContainer.replaceChildren(addTextElement('div', 'alliances-message', 'No se pudieron cargar los personajes. Comprueba sus archivos JSON y vuelve a abrir esta pestaña.'));
+    charactersStatus.textContent = 'Error al actualizar los datos';
+    console.error('No se pudieron cargar los personajes:', error);
+  }
+}
+
 loadPhases();
 loadAlliances();
+loadCharacters();
 window.addEventListener('focus', () => {
   if (!document.getElementById('alliancesView').hidden) loadAlliances();
+  if (!document.getElementById('charactersView').hidden) loadCharacters();
   if (!document.getElementById('mapView').hidden) loadPhases();
 });
 </script>

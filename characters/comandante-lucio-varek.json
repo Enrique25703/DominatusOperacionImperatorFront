@@ -1,0 +1,10 @@
+{
+  "nombre": "Castellano Lucan Veyr",
+  "foto": "characters/images/comandante-lucio-varek.png",
+  "biografia": "Lucan Veyr ostenta el título de Castellano entre los supervivientes del 417.º Regimiento Blindado Cadiano, prácticamente destruido tras años de campaña. Tras la devastación de su antiguo regimiento, Veyr y los carros que quedaron en pie se unieron al 256.º de Cadia, llevando consigo una veteranía forjada entre ruinas y retiradas imposibles. A diferencia de otros oficiales de su rango, nunca dirige la batalla desde un puesto de mando fortificado: su castillo es un Rogal Dorn cubierto de cicatrices, el Tridente de Cadia, desde cuya torreta coordina personalmente el avance de sus fuerzas acorazadas.\n\nVeyr alcanzó renombre gracias a la formación conocida como el Tridente de Veyr. El Tridente de Cadia ocupa la punta central y avanza directamente hacia el núcleo de la posición enemiga, atrayendo el fuego y fijando a sus reservas. Otros dos carros progresan ligeramente retrasados, uno en cada flanco, cubriendo los ángulos muertos del Rogal Dorn y castigando los laterales de cualquier blindado que trate de cerrarle el paso. Cuando los tres cañones convergen sobre un mismo objetivo, incluso las fortalezas móviles más pesadas terminan cediendo.\n\nEsta táctica convirtió a Veyr en un especialista en rupturas de líneas y enfrentamientos entre formaciones acorazadas. Allí donde otros comandantes contemplan un campo de batalla, él observa distancias, líneas de tiro y rutas de intercepción. Rara vez abandona su tanque y sostiene que un Castellano cadiano no necesita gobernar desde una fortaleza mientras pueda llevarla consigo.",
+  "faccion": "Astra Militarum — 256.ª de Cadia",
+  "alianza": "imperial",
+  "rango": "Castellano del 256.º de Cadia",
+  "vehiculo": "Tridente de Cadia",
+  "batallasImportantes": []
+}

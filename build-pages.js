@@ -28,10 +28,12 @@ if (fs.existsSync(outputDirectory)) {
 
 fs.mkdirSync(path.join(outputDirectory, 'sectors'), { recursive: true });
 fs.mkdirSync(path.join(outputDirectory, 'data'), { recursive: true });
+fs.mkdirSync(path.join(outputDirectory, 'characters'), { recursive: true });
 fs.writeFileSync(marker, 'Carpeta generada por build-pages.js\n');
 fs.copyFileSync(path.join(projectRoot, 'index.html'), path.join(outputDirectory, 'index.html'));
 fs.cpSync(path.join(projectRoot, 'assets'), path.join(outputDirectory, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(projectRoot, 'data', 'alianzas.json'), path.join(outputDirectory, 'data', 'alianzas.json'));
+fs.cpSync(path.join(projectRoot, 'characters'), path.join(outputDirectory, 'characters'), { recursive: true });
 for (const file of phaseFiles) {
   fs.copyFileSync(path.join(sectorsDirectory, file), path.join(outputDirectory, 'sectors', file));
 }
