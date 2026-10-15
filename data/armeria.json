@@ -1,0 +1,309 @@
+{
+  "source": "https://wahapedia.ru/wh40k11ed/the-rules/dominatus/",
+  "sections": [
+    {
+      "id": "battle-skills",
+      "title": "Battle Skills",
+      "description": "Upgrades drawn after a battle by the losing player, or by both players if the battle is a draw during campaign phases 1 and 2.",
+      "cards": [
+        {
+          "id": "front-line-champion",
+          "name": "Front-line Champion",
+          "flavour": "A commander who thrives at close range steadies the aim of everyone fighting nearby.",
+          "who": "One CHARACTER model.",
+          "effect": ["When this unit attacks an enemy unit within 9\", its hit rolls can be re-rolled."]
+        },
+        {
+          "id": "fortunes-favoured",
+          "name": "Fortune's Favoured",
+          "flavour": "A timely stroke of luck shields this veteran from a deadly volley.",
+          "who": "One CHARACTER model.",
+          "effect": ["Once per battle, when attacks target this unit, this model may activate the skill. The unit has a 4+ invulnerable save until those attacks have been resolved."]
+        },
+        {
+          "id": "lead-from-the-front",
+          "name": "Lead from the Front",
+          "flavour": "The force follows a leader who is already moving toward the enemy.",
+          "who": "One CHARACTER model.",
+          "effect": ["This unit gains Scouts 6\"."],
+          "bonus": { "appliesTo": "MOUNTED", "effect": "The unit gains Scouts 9\" instead." }
+        },
+        {
+          "id": "born-survivor",
+          "name": "Born Survivor",
+          "flavour": "Years of fighting have taught this warrior how to endure wounds that would fell others.",
+          "who": "One CHARACTER model.",
+          "effect": ["This model gains Feel No Pain 6+."],
+          "bonus": { "appliesTo": "INFANTRY or MOUNTED", "effect": "The model has Feel No Pain 5+ instead." }
+        },
+        {
+          "id": "natural-leader",
+          "name": "Natural Leader",
+          "flavour": "The commander's presence holds nearby formations together when morale begins to fail.",
+          "who": "One CHARACTER model.",
+          "effect": ["Inspiring Presence (Aura): friendly units within 9\" automatically pass Battle-shock rolls, provided they are not below half-strength."],
+          "bonus": { "appliesTo": "WARLORD", "effect": "Friendly units within 9\" of this model also gain +1 Leadership." }
+        },
+        {
+          "id": "high-strategy",
+          "name": "High Strategy",
+          "flavour": "Careful preparation gives the army more resources at the outset of battle.",
+          "who": "One CHARACTER model.",
+          "effect": ["You start the battle with 1 CP."],
+          "bonus": { "appliesTo": "WARLORD", "effect": "You start the battle with 2 CP instead." }
+        },
+        {
+          "id": "tempered-in-battle",
+          "name": "Tempered in Battle",
+          "flavour": "This leader can withdraw and immediately turn the retreat into another attack.",
+          "who": "One CHARACTER model.",
+          "effect": ["This unit may shoot and declare a charge in a turn when it Fell Back."],
+          "bonus": { "appliesTo": "INFANTRY", "effect": "The unit may also start an action in a turn when it Fell Back." }
+        },
+        {
+          "id": "tactical-redeployment",
+          "name": "Tactical Redeployment",
+          "flavour": "A last-minute change of formation places key units where they will matter most.",
+          "who": "One CHARACTER model.",
+          "effect": ["During the Redeploy Units step, choose up to three friendly units. Redeploy each or put it into Strategic Reserves; those units do not count against the Strategic Reserves limit."]
+        },
+        {
+          "id": "terrifying-presence",
+          "name": "Terrifying Presence",
+          "flavour": "The sight of this fighter is enough to unsettle an enemy already locked in combat.",
+          "who": "One CHARACTER model.",
+          "effect": ["At the start of the Fight phase, choose one enemy unit engaged with this unit. Your opponent makes a Battle-shock roll for the chosen unit."],
+          "bonus": { "appliesTo": "MONSTER or VEHICLE", "effect": "Subtract 1 from Battle-shock rolls caused by this skill." }
+        }
+      ]
+    },
+    {
+      "id": "battle-honours",
+      "title": "Battle Honours",
+      "description": "The victor draws from the current phase's deck after battles in phases 1 and 2. Phase 3 awards Path to Conquest to the victor.",
+      "cards": [
+        {
+          "id": "shadow-stalker",
+          "name": "Shadow Stalker",
+          "phase": 1,
+          "flavour": "This fighter uses smoke and ruined ground to stay out of the enemy's sights.",
+          "who": "One CHARACTER model.",
+          "effect": ["This unit gains Stealth."]
+        },
+        {
+          "id": "undying-duty",
+          "name": "Undying Duty",
+          "phase": 1,
+          "flavour": "Even as they fall, the warrior's followers strike back at their attackers.",
+          "who": "One CHARACTER model.",
+          "effect": ["In the Fight phase, after an enemy unit finishes attacks against this unit, roll one D6 for every model those attacks destroyed in this unit. Each 5+ inflicts 1 mortal wound on the attacker."],
+          "bonus": { "appliesTo": "MONSTER", "effect": "Each successful 5+ inflicts D3 mortal wounds instead." }
+        },
+        {
+          "id": "grim-veterans",
+          "name": "Grim Veterans",
+          "phase": 1,
+          "flavour": "A hardened retinue keeps its position under intense pressure.",
+          "who": "One CHARACTER model.",
+          "effect": ["While this unit is not Battle-shocked, its models gain +1 Objective Control."],
+          "bonus": { "appliesTo": "INFANTRY", "effect": "Leadership rolls for this unit can be re-rolled." }
+        },
+        {
+          "id": "kingslayer",
+          "name": "Kingslayer",
+          "phase": 1,
+          "flavour": "The champion has become adept at reaching enemy commanders through the melee.",
+          "who": "One CHARACTER model.",
+          "effect": ["This model's melee weapons gain Precision. Re-roll its hit rolls when its attacks target a CHARACTER unit."]
+        },
+        {
+          "id": "fire-and-fury",
+          "name": "Fire and Fury",
+          "phase": 1,
+          "flavour": "Relentless volleys accompany the force whether it advances or holds ground.",
+          "who": "One CHARACTER model.",
+          "effect": ["This unit's ranged weapons gain Assault and Heavy."],
+          "bonus": { "appliesTo": "MONSTER or VEHICLE", "effect": "Re-roll hit rolls of 1 for this model's Blast weapons." }
+        },
+        {
+          "id": "wraith-of-ruin",
+          "name": "Wraith of Ruin",
+          "phase": 2,
+          "flavour": "Ash and wreckage conceal the force until it is close enough to strike.",
+          "who": "One CHARACTER model.",
+          "effect": ["Enemy models cannot see this unit unless they are within 18\" of it."]
+        },
+        {
+          "id": "swift-as-the-wind",
+          "name": "Swift as the Wind",
+          "phase": 2,
+          "flavour": "The commander's formation crosses the battlefield with unexpected speed.",
+          "who": "One CHARACTER model.",
+          "effect": ["This unit gains +2\" Move."],
+          "bonus": { "appliesTo": "MONSTER or VEHICLE", "effect": "The unit gains +3\" Move instead." }
+        },
+        {
+          "id": "battle-hungry",
+          "name": "Battle Hungry",
+          "phase": 2,
+          "flavour": "The unit surges toward combat and rarely misses its chance to close.",
+          "who": "One CHARACTER model.",
+          "effect": ["Charge rolls for this unit can be re-rolled."],
+          "bonus": { "appliesTo": "MOUNTED", "effect": "Advance rolls for this unit can also be re-rolled." }
+        },
+        {
+          "id": "ferocious-combatant",
+          "name": "Ferocious Combatant",
+          "phase": 2,
+          "flavour": "Close combat grows more violent wherever this fighter leads.",
+          "who": "One CHARACTER model.",
+          "effect": ["This unit's melee weapons gain Sustained Hits 1."],
+          "bonus": { "appliesTo": "MONSTER or VEHICLE", "effect": "This model's melee weapons also gain Cleave 1." }
+        },
+        {
+          "id": "breach-and-burn",
+          "name": "Breach and Burn",
+          "phase": 2,
+          "flavour": "At short range, the unit's firepower drives enemies from cover.",
+          "who": "One CHARACTER model.",
+          "effect": ["In your Shooting phase, this unit's attacks against an enemy unit within 18\" gain Ignores Cover."]
+        },
+        {
+          "id": "path-to-conquest",
+          "name": "Path to Conquest",
+          "phase": 3,
+          "flavour": "The last victory decides which alliance claims the final battlefield.",
+          "who": null,
+          "effect": ["At the end of campaign phase 3, the alliance with the most Phase 3 Battle Honours takes control of the Phase 3 Location."]
+        }
+      ]
+    },
+    {
+      "id": "relics",
+      "title": "Relics",
+      "description": "Alliance-specific upgrades obtained from Agenda Achieved cards at the end of campaign phases 1 and 2.",
+      "cards": [
+        {
+          "id": "blade-of-sacrifice",
+          "name": "Blade of Sacrifice",
+          "alliance": "Liberators",
+          "flavour": "A martyr's blade converts the bearer's own vitality into devastating melee power.",
+          "who": "One CHARACTER model, excluding EPIC HEROES.",
+          "effect": ["When this unit is selected to fight, its bearer may lose 1, 2 or 3 wounds, but never more than it has remaining. Until the end of the phase, each wound lost this way gives its melee weapons +1 Attacks, +1 Strength and +1 Armour Penetration."]
+        },
+        {
+          "id": "strategic-laurels",
+          "name": "Strategic Laurels",
+          "alliance": "Liberators",
+          "flavour": "A tactical data network rewards the bearer for securing ground.",
+          "who": "One CHARACTER model.",
+          "effect": ["In your Command phase, if this unit controls an objective, make a Leadership roll for it. Gain 1 CP if the roll succeeds."]
+        },
+        {
+          "id": "emperors-tarot",
+          "name": "The Emperor's Tarot",
+          "alliance": "Liberators",
+          "flavour": "A reading offers the commander a chance to reshape the mission ahead.",
+          "who": "One CHARACTER model.",
+          "effect": ["At the start of your first Command phase, if you use Fixed Missions, exchange one of them for a different Fixed Mission of your choice.", "If you use Tactical Missions, inspect the top three cards of your Tactical Missions deck and return them face down in any order."]
+        },
+        {
+          "id": "vortex-grenade",
+          "name": "Vortex Grenade",
+          "alliance": "Liberators",
+          "flavour": "A miniature warp breach devastates a nearby target and threatens its thrower.",
+          "who": "One CHARACTER model.",
+          "effect": ["Once per battle, when this unit is selected to shoot in your Shooting phase, choose an unengaged enemy unit within 8\" of this model.", "Roll three D6. Each result of 2+ inflicts D3 mortal wounds on that enemy unit.", "Then make one Hazard roll for this unit."]
+        },
+        {
+          "id": "master-crafted-armour",
+          "name": "Master-crafted Armour",
+          "alliance": "Liberators",
+          "flavour": "Exceptional armour lets the bearer survive blows that would breach ordinary plate.",
+          "who": "One CHARACTER model, excluding EPIC HEROES.",
+          "effect": ["This model gains a 4+ invulnerable save.", "Increase its Toughness, Save and Wounds characteristics by 1."]
+        },
+        {
+          "id": "powerfield-projector",
+          "name": "Powerfield Projector",
+          "alliance": "Oppressors",
+          "flavour": "The field catches incoming fire and sometimes throws its force back at the shooter.",
+          "who": "One CHARACTER model, excluding EPIC HEROES.",
+          "effect": ["This unit gains a 5+ invulnerable save against ranged attacks.", "For each unmodified saving throw of 6 against ranged attacks, the attacking unit suffers 1 mortal wound after its attacks are resolved."]
+        },
+        {
+          "id": "ruinator",
+          "name": "Ruinator",
+          "alliance": "Oppressors",
+          "flavour": "A dangerous weapon grows more destructive as the battle wears on.",
+          "who": "One CHARACTER model, excluding EPIC HEROES.",
+          "effect": ["Once per battle, when this unit is selected to fight, choose one melee weapon on this model. Until the end of the phase it gains Devastating Wounds and Hazardous.", "Also increase that weapon's Attacks and Strength by half the current battle round number, rounded up."]
+        },
+        {
+          "id": "temporal-talisman",
+          "name": "Temporal Talisman",
+          "alliance": "Oppressors",
+          "flavour": "A stasis field grants the bearer an instant of advantage before blows land.",
+          "who": "One CHARACTER model, excluding EPIC HEROES.",
+          "effect": ["This unit gains Fights First."]
+        },
+        {
+          "id": "personal-teleporter",
+          "name": "Personal Teleporter",
+          "alliance": "Oppressors",
+          "flavour": "An unstable teleport device allows a sudden battlefield arrival.",
+          "who": "One CHARACTER model.",
+          "effect": ["This unit gains Deep Strike.", "Once per battle, you may target this unit with Rapid Ingress for 0 CP."]
+        },
+        {
+          "id": "enhanced-bionics",
+          "name": "Enhanced Bionics",
+          "alliance": "Oppressors",
+          "flavour": "Self-repairing implants can restore the bearer even after a seemingly fatal blow.",
+          "who": "One CHARACTER model.",
+          "effect": ["In your Command phase, this model regains up to D3 lost wounds.", "The first time it is destroyed, remove it. At the end of that phase roll a D6, adding 2 if it is INFANTRY or MOUNTED. On 4+, set it up as close as possible to where it fell, unengaged, with 3 wounds remaining."]
+        },
+        {
+          "id": "maelstrom-clarion",
+          "name": "Maelstrom Clarion",
+          "alliance": "Raiders",
+          "flavour": "Disruptive signals interfere with an enemy's arrival near the bearer.",
+          "who": "One CHARACTER model.",
+          "effect": ["Enemy units making an ingress move cannot be set up within 12\" of this model."]
+        },
+        {
+          "id": "displacer-field",
+          "name": "Displacer Field",
+          "alliance": "Raiders",
+          "flavour": "A brief warp jump pulls the bearer clear of concentrated fire.",
+          "who": "One CHARACTER model.",
+          "effect": ["Once per battle, at the end of your opponent's Shooting phase, if this unit is unengaged and was targeted by attacks that phase, you may remove it and place it in Strategic Reserves.", "On its next ingress move, it gains Deep Strike until that move ends."]
+        },
+        {
+          "id": "disruption-orb",
+          "name": "Disruption Orb",
+          "alliance": "Raiders",
+          "flavour": "The orb's signal makes nearby enemy orders harder to coordinate.",
+          "who": "One CHARACTER model.",
+          "effect": ["Agent of Discord (Aura): when an opponent's Stratagem targets an enemy unit within 12\" of this model, that use costs 1 additional CP."]
+        },
+        {
+          "id": "fate-forged-weapon",
+          "name": "Fate-forged Weapon",
+          "alliance": "Raiders",
+          "flavour": "A weapon of infamous history strikes harder and finds vulnerable points.",
+          "who": "One CHARACTER model, excluding EPIC HEROES.",
+          "effect": ["This model's melee weapons gain +1 Armour Penetration and +1 Damage.", "In the Fight phase, wound rolls for this model's attacks can be re-rolled."]
+        },
+        {
+          "id": "cloak-of-shadows",
+          "name": "Cloak of Shadows",
+          "alliance": "Raiders",
+          "flavour": "The cloak conceals its bearer from conventional and unnatural senses alike.",
+          "who": "One CHARACTER model, excluding EPIC HEROES.",
+          "effect": ["This unit gains Infiltrators."]
+        }
+      ]
+    }
+  ]
+}

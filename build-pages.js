@@ -33,6 +33,8 @@ fs.writeFileSync(marker, 'Carpeta generada por build-pages.js\n');
 fs.copyFileSync(path.join(projectRoot, 'index.html'), path.join(outputDirectory, 'index.html'));
 fs.cpSync(path.join(projectRoot, 'assets'), path.join(outputDirectory, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(projectRoot, 'data', 'alianzas.json'), path.join(outputDirectory, 'data', 'alianzas.json'));
+fs.copyFileSync(path.join(projectRoot, 'data', 'codex.json'), path.join(outputDirectory, 'data', 'codex.json'));
+fs.copyFileSync(path.join(projectRoot, 'data', 'armeria.json'), path.join(outputDirectory, 'data', 'armeria.json'));
 fs.cpSync(path.join(projectRoot, 'characters'), path.join(outputDirectory, 'characters'), { recursive: true });
 for (const file of phaseFiles) {
   fs.copyFileSync(path.join(sectorsDirectory, file), path.join(outputDirectory, 'sectors', file));

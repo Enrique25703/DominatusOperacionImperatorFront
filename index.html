@@ -171,7 +171,7 @@ body{min-height:100vh;padding:20px}
 }
 .sector-picker select:focus-visible{outline:2px solid #dfffee;outline-offset:2px}
 .view[hidden]{display:none!important}
-.alliances-view,.characters-view{
+.alliances-view,.characters-view,.codex-view,.armoury-view{
   border:1px solid var(--border);border-radius:8px;padding:clamp(18px,3vw,34px);
   background:
     linear-gradient(rgba(3,18,12,.9),rgba(2,10,7,.96)),
@@ -241,14 +241,73 @@ body{min-height:100vh;padding:20px}
 .character-details h3{margin:0 0 8px;color:#85ddb5;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
 .character-details p{margin:0;color:#bcebd1;font-size:14px;line-height:1.65}
 .character-details ul{margin:0;padding-left:19px;color:#bcebd1;font-size:14px;line-height:1.55}
+.codex-list{display:grid;gap:14px;max-width:1040px}
+.codex-card{overflow:hidden;border:1px solid rgba(135,255,208,.25);border-radius:8px;background:rgba(4,24,16,.84);box-shadow:inset 0 0 36px rgba(61,255,162,.025);cursor:pointer;transition:border-color .2s ease,box-shadow .2s ease}
+.codex-card:hover,.codex-card.is-open{border-color:rgba(135,255,208,.64)}
+.codex-card.is-open{box-shadow:inset 0 0 42px rgba(61,255,162,.04),0 8px 28px rgba(0,0,0,.18)}
+.codex-trigger{display:flex;align-items:center;justify-content:space-between;gap:22px;width:100%;padding:22px 26px;border:0;background:transparent;color:inherit;text-align:left;cursor:pointer;font:inherit}
+.codex-trigger:hover{background:rgba(24,67,48,.25)}
+.codex-trigger:focus-visible{outline:2px solid #dfffee;outline-offset:-4px}
+.codex-trigger-copy{display:grid;gap:5px;min-width:0}
+.codex-phase{color:#85ddb5;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+.codex-title{color:#ecfff5;font-size:clamp(20px,2.6vw,29px);font-weight:750;line-height:1.2}
+.codex-subtitle{color:#9ed0b8;font-size:14px;line-height:1.45}
+.codex-meta{margin-top:5px;color:#78b697;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.codex-chevron{flex:none;width:12px;height:12px;border-right:2px solid var(--cyan);border-bottom:2px solid var(--cyan);transform:rotate(45deg);transition:transform .3s ease}
+.codex-card.is-open .codex-chevron{transform:rotate(225deg)}
+.codex-panel{display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .34s ease,opacity .26s ease}
+.codex-card.is-open .codex-panel{grid-template-rows:1fr;opacity:1}
+.codex-panel-inner{min-height:0;overflow:hidden}
+.codex-prose{max-width:78ch;margin:auto;padding:0 30px;color:#d2e9db}
+.codex-card.is-open .codex-prose{padding-top:28px;padding-bottom:38px;border-top:1px solid rgba(135,255,208,.18)}
+.codex-illustration{display:block;width:100%;max-height:380px;object-fit:cover;margin:0 0 32px;border:1px solid rgba(135,255,208,.25);border-radius:6px}
+.codex-inline-image{height:auto;max-height:none;object-fit:contain;margin:28px 0 34px}
+.codex-prose h3{margin:34px 0 14px;color:#ecfff5;font-size:clamp(19px,2vw,23px);line-height:1.3}
+.codex-prose h3:first-child{margin-top:0}
+.codex-prose p{margin:0 0 17px;font-size:16px;line-height:1.75}
+.codex-highlight{margin:28px 0;padding:16px 22px;border-left:3px solid var(--cyan);background:rgba(135,255,208,.065);color:#ecfff5;font-size:clamp(17px,2vw,20px);font-style:italic;line-height:1.55}
+.codex-highlight strong{color:var(--cyan);font-weight:800}
+.codex-divider{width:42%;max-width:240px;margin:34px auto;border:0;border-top:1px solid rgba(135,255,208,.45)}
+.codex-next-phase{margin:30px 0 0;padding:20px;border:1px solid rgba(135,255,208,.34);background:rgba(21,65,44,.33);color:var(--cyan);font-size:clamp(15px,2vw,19px);font-style:italic;font-weight:750;letter-spacing:.09em;line-height:1.4;text-align:center}
+.armoury-container{display:grid;gap:14px;max-width:1200px}
+.armoury-section{--armoury-accent:var(--cyan);overflow:hidden;border:1px solid rgba(135,255,208,.3);border-radius:8px;background:rgba(4,24,16,.84)}
+.armoury-section[data-section="battle-honours"]{--armoury-accent:#ffc286}
+.armoury-section[data-section="relics"]{--armoury-accent:#cbaeff}
+.armoury-section[open]{border-color:var(--armoury-accent)}
+.armoury-summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;cursor:pointer;list-style:none}
+.armoury-summary::-webkit-details-marker{display:none}
+.armoury-summary:hover{background:rgba(24,67,48,.24)}
+.armoury-summary:focus-visible{outline:2px solid #dfffee;outline-offset:-3px}
+.armoury-summary-text{display:grid;gap:5px}
+.armoury-summary-title{color:var(--armoury-accent);font-size:clamp(21px,2.7vw,29px);font-weight:750}
+.armoury-summary-count{color:#9ed0b8;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.armoury-chevron{flex:none;width:12px;height:12px;border-right:2px solid var(--armoury-accent);border-bottom:2px solid var(--armoury-accent);transform:rotate(45deg);transition:transform .2s ease}
+.armoury-section[open] .armoury-chevron{transform:rotate(225deg)}
+.armoury-section-body{padding:0 24px 24px;border-top:1px solid rgba(135,255,208,.18)}
+.armoury-section-description{max-width:80ch;margin:18px 0 22px;color:#a9d9c0;font-size:14px;line-height:1.6}
+.upgrade-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:14px}
+.upgrade-card{display:flex;flex-direction:column;gap:13px;padding:19px;border:1px solid rgba(135,255,208,.2);border-radius:7px;background:rgba(1,14,9,.78)}
+.upgrade-card-top{display:flex;justify-content:space-between;align-items:start;gap:10px}
+.upgrade-card h3{margin:0;color:#ecfff5;font-size:18px;line-height:1.3}
+.upgrade-tag{flex:none;border:1px solid var(--armoury-accent);border-radius:4px;padding:4px 7px;color:var(--armoury-accent);font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.upgrade-flavour{margin:0;color:#a9d9c0;font-size:13px;font-style:italic;line-height:1.55}
+.upgrade-field{display:grid;gap:4px}
+.upgrade-label{color:var(--armoury-accent);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.upgrade-field p,.upgrade-field li{margin:0;color:#d2e9db;font-size:13px;line-height:1.55}
+.upgrade-field ul{margin:0;padding-left:18px;display:grid;gap:5px}
+.upgrade-bonus{margin-top:auto;padding-top:12px;border-top:1px solid rgba(135,255,208,.16)}
+.armoury-source{display:inline-block;margin-top:13px;color:#85ddb5;font-size:12px;text-underline-offset:3px}
+.armoury-source:focus-visible{outline:2px solid #dfffee;outline-offset:3px}
 @media(max-width:900px){
   .viewer{grid-template-columns:1fr}
   .status{width:100%;margin-left:0}
 }
+@media(max-width:650px){.tabs{flex-wrap:wrap}.tab{flex:1 1 auto}}
 @media(max-width:520px){
   body{padding:12px}
-  .top-nav,.tabs{width:100%}
-  .tab{flex:1;padding-inline:10px}
+   .top-nav,.tabs{width:100%}
+   .tabs{flex-wrap:wrap}
+   .tab{flex:1 1 calc(50% - 4px);padding-inline:10px}
   .phase-picker{width:100%;justify-content:space-between}
   .phase-picker select{flex:1}
   .toolbar{gap:7px}
@@ -275,11 +334,17 @@ body{min-height:100vh;padding:20px}
    .character-summary-name{font-size:19px}
    .character-rank,.character-faction{font-size:12px}
    .character-details{padding:18px}
+   .codex-trigger{padding:18px;gap:14px}
+   .codex-prose{padding-left:18px;padding-right:18px}
+   .codex-prose p{font-size:15px;line-height:1.7}
+   .armoury-summary{padding:17px}
+   .armoury-section-body{padding:0 16px 16px}
+   .upgrade-card{padding:16px}
 }
 @media(prefers-reduced-motion:reduce){
   .scan,.sector-polygon.control-disputado{animation:none}
   .sector-polygon.control-disputado{fill:rgba(255,147,49,.45);stroke:#ffad58}
-   .map-stage,.sector-label,.character-chevron{transition:none}
+   .map-stage,.sector-label,.character-chevron,.codex-card,.codex-chevron,.codex-panel,.armoury-chevron{transition:none}
 }
 </style>
 </head>
@@ -290,6 +355,8 @@ body{min-height:100vh;padding:20px}
       <button class="tab is-active" id="mapTab" type="button" role="tab" aria-selected="true" aria-controls="mapView" data-view="mapView">Mapa planetario</button>
       <button class="tab" id="alliancesTab" type="button" role="tab" aria-selected="false" aria-controls="alliancesView" data-view="alliancesView" tabindex="-1">Alianzas</button>
       <button class="tab" id="charactersTab" type="button" role="tab" aria-selected="false" aria-controls="charactersView" data-view="charactersView" tabindex="-1">Personajes</button>
+      <button class="tab" id="codexTab" type="button" role="tab" aria-selected="false" aria-controls="codexView" data-view="codexView" tabindex="-1">Codex</button>
+      <button class="tab" id="armouryTab" type="button" role="tab" aria-selected="false" aria-controls="armouryView" data-view="armouryView" tabindex="-1">Armería</button>
     </nav>
     <label class="phase-picker" for="phaseSelect">
       Fase
@@ -386,6 +453,29 @@ body{min-height:100vh;padding:20px}
       <div class="alliances-message">Cargando personajes registrados…</div>
     </div>
   </section>
+  <section class="view codex-view" id="codexView" role="tabpanel" aria-labelledby="codexTab" hidden>
+    <header class="alliances-intro">
+      <div class="eyebrow">Registro narrativo</div>
+      <h1>Codex de la campaña</h1>
+      <p>La crónica de Armageddon, desde la primera llamada hasta los últimos frentes.</p>
+      <div class="alliances-status" id="codexStatus" aria-live="polite">Cargando entradas…</div>
+    </header>
+    <div class="codex-list" id="codexList">
+      <div class="alliances-message">Cargando archivo narrativo…</div>
+    </div>
+  </section>
+  <section class="view armoury-view" id="armouryView" role="tabpanel" aria-labelledby="armouryTab" hidden>
+    <header class="alliances-intro">
+      <div class="eyebrow">Mejoras de campaña</div>
+      <h1>Armería</h1>
+      <p>Consulta las habilidades, honores y reliquias disponibles durante la campaña.</p>
+      <a class="armoury-source" href="https://wahapedia.ru/wh40k11ed/the-rules/dominatus/" target="_blank" rel="noopener noreferrer">Consultar reglas de Dominatus ↗</a>
+      <div class="alliances-status" id="armouryStatus" aria-live="polite">Cargando cartas…</div>
+    </header>
+    <div class="armoury-container" id="armouryContainer">
+      <div class="alliances-message">Cargando Armería…</div>
+    </div>
+  </section>
 </div>
 
 <script>
@@ -414,6 +504,10 @@ const alliancesContainer = document.getElementById('alliancesContainer');
 const alliancesStatus = document.getElementById('alliancesStatus');
 const charactersContainer = document.getElementById('charactersContainer');
 const charactersStatus = document.getElementById('charactersStatus');
+const codexList = document.getElementById('codexList');
+const codexStatus = document.getElementById('codexStatus');
+const armouryContainer = document.getElementById('armouryContainer');
+const armouryStatus = document.getElementById('armouryStatus');
 let zoom = 1;
 let panX = 0;
 let panY = 0;
@@ -437,6 +531,8 @@ tabButtons.forEach((tab, index) => {
     selectView(tab);
     if (tab.dataset.view === 'alliancesView') loadAlliances();
     if (tab.dataset.view === 'charactersView') loadCharacters();
+    if (tab.dataset.view === 'codexView') loadCodex();
+    if (tab.dataset.view === 'armouryView') loadArmoury();
     if (tab.dataset.view === 'mapView') loadPhases();
   });
   tab.addEventListener('keydown', event => {
@@ -447,6 +543,8 @@ tabButtons.forEach((tab, index) => {
     selectView(nextTab);
     if (nextTab.dataset.view === 'alliancesView') loadAlliances();
     if (nextTab.dataset.view === 'charactersView') loadCharacters();
+    if (nextTab.dataset.view === 'codexView') loadCodex();
+    if (nextTab.dataset.view === 'armouryView') loadArmoury();
     if (nextTab.dataset.view === 'mapView') loadPhases();
     nextTab.focus();
   });
@@ -1104,12 +1202,249 @@ async function loadCharacters() {
   }
 }
 
+function setCodexExpanded(card, expanded) {
+  const trigger = card.querySelector('.codex-trigger');
+  const panel = card.querySelector('.codex-panel');
+  card.classList.toggle('is-open', expanded);
+  trigger.setAttribute('aria-expanded', String(expanded));
+  panel.setAttribute('aria-hidden', String(!expanded));
+  panel.inert = !expanded;
+}
+
+function appendCodexEmphasis(element, text) {
+  const emphasis = /\*\*(.+?)\*\*/g;
+  let offset = 0;
+  for (const match of text.matchAll(emphasis)) {
+    element.append(document.createTextNode(text.slice(offset, match.index)));
+    element.append(addTextElement('strong', '', match[1]));
+    offset = match.index + match[0].length;
+  }
+  element.append(document.createTextNode(text.slice(offset)));
+}
+
+function renderCodexBlock(block) {
+  if (!block || typeof block !== 'object') return null;
+  const text = typeof block.texto === 'string' ? block.texto : '';
+  switch (block.tipo) {
+    case 'titulo': return addTextElement('h3', '', text);
+    case 'parrafo': return addTextElement('p', '', text);
+    case 'destacado': {
+      const highlight = document.createElement('blockquote');
+      highlight.className = 'codex-highlight';
+      appendCodexEmphasis(highlight, text);
+      return highlight;
+    }
+    case 'imagen': {
+      if (typeof block.src !== 'string' || !block.src.trim()) return null;
+      const illustration = document.createElement('img');
+      illustration.className = 'codex-illustration codex-inline-image';
+      illustration.src = block.src;
+      illustration.alt = typeof block.alt === 'string' ? block.alt : '';
+      illustration.loading = 'lazy';
+      illustration.addEventListener('error', () => illustration.remove(), { once: true });
+      return illustration;
+    }
+    case 'separador': {
+      const divider = document.createElement('hr');
+      divider.className = 'codex-divider';
+      return divider;
+    }
+    case 'siguienteFase': return addTextElement('div', 'codex-next-phase', text);
+    default: return null;
+  }
+}
+
+function renderCodex(data) {
+  if (!Array.isArray(data)) throw new Error('El Codex debe ser una lista de entradas.');
+  const entries = data.map((entry, index) => ({ entry, index })).sort((left, right) =>
+    (Number(left.entry.fase) - Number(right.entry.fase)) ||
+    String(left.entry.fecha || '9999').localeCompare(String(right.entry.fecha || '9999')) ||
+    left.index - right.index
+  );
+  codexList.replaceChildren();
+  if (!entries.length) codexList.append(addTextElement('div', 'alliances-message', 'Todavía no hay entradas en el Codex.'));
+
+  entries.forEach(({ entry }, index) => {
+    if (!entry || typeof entry.titulo !== 'string' || !Array.isArray(entry.contenido)) {
+      throw new Error('Hay una entrada del Codex incompleta.');
+    }
+    const card = document.createElement('article');
+    card.className = 'codex-card';
+    const trigger = document.createElement('button');
+    trigger.className = 'codex-trigger';
+    trigger.type = 'button';
+    trigger.setAttribute('aria-expanded', 'false');
+    trigger.setAttribute('aria-controls', `codex-panel-${index}`);
+    const summary = document.createElement('span');
+    summary.className = 'codex-trigger-copy';
+    if (entry.fase !== null && entry.fase !== undefined) summary.append(addTextElement('span', 'codex-phase', `Fase ${entry.fase}`));
+    summary.append(addTextElement('span', 'codex-title', entry.titulo));
+    if (entry.subtitulo) summary.append(addTextElement('span', 'codex-subtitle', entry.subtitulo));
+    const meta = [entry.categoria, entry.fecha].filter(Boolean).join(' · ');
+    if (meta) summary.append(addTextElement('span', 'codex-meta', meta));
+    trigger.append(summary, addTextElement('span', 'codex-chevron', ''));
+
+    const panel = document.createElement('div');
+    panel.className = 'codex-panel';
+    panel.id = `codex-panel-${index}`;
+    panel.setAttribute('aria-hidden', 'true');
+    panel.inert = true;
+    const panelInner = document.createElement('div');
+    panelInner.className = 'codex-panel-inner';
+    const prose = document.createElement('div');
+    prose.className = 'codex-prose';
+    if (typeof entry.imagen === 'string' && entry.imagen.trim()) {
+      const illustration = document.createElement('img');
+      illustration.className = 'codex-illustration';
+      illustration.src = entry.imagen;
+      illustration.alt = `Ilustración de ${entry.titulo}`;
+      illustration.loading = 'lazy';
+      illustration.addEventListener('error', () => illustration.remove(), { once: true });
+      prose.append(illustration);
+    }
+    entry.contenido.forEach(block => {
+      const element = renderCodexBlock(block);
+      if (element) prose.append(element);
+    });
+    panelInner.append(prose);
+    panel.append(panelInner);
+    card.append(trigger, panel);
+    card.addEventListener('click', event => {
+      if (event.target.closest('a, button:not(.codex-trigger)')) return;
+      const shouldOpen = !card.classList.contains('is-open');
+      codexList.querySelectorAll('.codex-card.is-open').forEach(openCard => setCodexExpanded(openCard, false));
+      if (shouldOpen) setCodexExpanded(card, true);
+    });
+    codexList.append(card);
+  });
+
+  codexStatus.textContent = `${entries.length} ${entries.length === 1 ? 'entrada' : 'entradas'} · orden cronológico`;
+}
+
+async function loadCodex() {
+  if (window.location.protocol === 'file:') {
+    codexList.replaceChildren(addTextElement('div', 'alliances-message', 'Para leer el Codex ejecuta “npm.cmd start” y entra en http://localhost:4173.'));
+    codexStatus.textContent = 'Servidor local necesario';
+    return;
+  }
+  try {
+    codexStatus.textContent = 'Actualizando archivo narrativo…';
+    const response = await fetch('./data/codex.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Error HTTP ${response.status}`);
+    renderCodex(await response.json());
+  } catch (error) {
+    codexList.replaceChildren(addTextElement('div', 'alliances-message', 'No se pudo cargar el Codex. Comprueba data/codex.json y vuelve a abrir esta pestaña.'));
+    codexStatus.textContent = 'Error al actualizar los datos';
+    console.error('No se pudo cargar el Codex:', error);
+  }
+}
+
+function renderArmoury(data) {
+  if (!Array.isArray(data?.sections)) throw new Error('La Armería debe contener una lista de apartados.');
+  armouryContainer.replaceChildren();
+  let totalCards = 0;
+
+  data.sections.forEach(sectionData => {
+    if (typeof sectionData.title !== 'string' || !Array.isArray(sectionData.cards)) {
+      throw new Error('Hay un apartado de la Armería incompleto.');
+    }
+    const section = document.createElement('details');
+    section.className = 'armoury-section';
+    section.dataset.section = sectionData.id || '';
+    section.open = true;
+    const summary = document.createElement('summary');
+    summary.className = 'armoury-summary';
+    const summaryText = document.createElement('span');
+    summaryText.className = 'armoury-summary-text';
+    summaryText.append(
+      addTextElement('span', 'armoury-summary-title', sectionData.title),
+      addTextElement('span', 'armoury-summary-count', `${sectionData.cards.length} cards`)
+    );
+    summary.append(summaryText, addTextElement('span', 'armoury-chevron', ''));
+
+    const body = document.createElement('div');
+    body.className = 'armoury-section-body';
+    if (sectionData.description) body.append(addTextElement('p', 'armoury-section-description', sectionData.description));
+    const grid = document.createElement('div');
+    grid.className = 'upgrade-grid';
+
+    sectionData.cards.forEach(cardData => {
+      if (typeof cardData.name !== 'string' || !Array.isArray(cardData.effect)) {
+        throw new Error(`Hay una carta incompleta en ${sectionData.title}.`);
+      }
+      totalCards += 1;
+      const card = document.createElement('article');
+      card.className = 'upgrade-card';
+      const heading = document.createElement('div');
+      heading.className = 'upgrade-card-top';
+      heading.append(addTextElement('h3', '', cardData.name));
+      const tag = cardData.phase ? `Phase ${cardData.phase}` : cardData.alliance;
+      if (tag) heading.append(addTextElement('span', 'upgrade-tag', tag));
+      card.append(heading);
+      if (cardData.flavour) card.append(addTextElement('p', 'upgrade-flavour', cardData.flavour));
+      if (cardData.who) {
+        const who = document.createElement('div');
+        who.className = 'upgrade-field';
+        who.append(addTextElement('span', 'upgrade-label', 'Who'), addTextElement('p', '', cardData.who));
+        card.append(who);
+      }
+      const effect = document.createElement('div');
+      effect.className = 'upgrade-field';
+      effect.append(addTextElement('span', 'upgrade-label', 'Effect'));
+      if (cardData.effect.length === 1) {
+        effect.append(addTextElement('p', '', cardData.effect[0]));
+      } else {
+        const list = document.createElement('ul');
+        cardData.effect.forEach(rule => list.append(addTextElement('li', '', rule)));
+        effect.append(list);
+      }
+      card.append(effect);
+      if (cardData.bonus) {
+        const bonus = document.createElement('div');
+        bonus.className = 'upgrade-field upgrade-bonus';
+        bonus.append(
+          addTextElement('span', 'upgrade-label', `Bonus · ${cardData.bonus.appliesTo}`),
+          addTextElement('p', '', cardData.bonus.effect)
+        );
+        card.append(bonus);
+      }
+      grid.append(card);
+    });
+    body.append(grid);
+    section.append(summary, body);
+    armouryContainer.append(section);
+  });
+  armouryStatus.textContent = `${totalCards} cartas · ${data.sections.length} apartados`;
+}
+
+async function loadArmoury() {
+  if (window.location.protocol === 'file:') {
+    armouryContainer.replaceChildren(addTextElement('div', 'alliances-message', 'Para leer la Armería ejecuta “npm.cmd start” y entra en http://localhost:4173.'));
+    armouryStatus.textContent = 'Servidor local necesario';
+    return;
+  }
+  try {
+    armouryStatus.textContent = 'Actualizando cartas…';
+    const response = await fetch('./data/armeria.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`Error HTTP ${response.status}`);
+    renderArmoury(await response.json());
+  } catch (error) {
+    armouryContainer.replaceChildren(addTextElement('div', 'alliances-message', 'No se pudo cargar la Armería. Comprueba data/armeria.json y vuelve a abrir esta pestaña.'));
+    armouryStatus.textContent = 'Error al actualizar los datos';
+    console.error('No se pudo cargar la Armería:', error);
+  }
+}
+
 loadPhases();
 loadAlliances();
 loadCharacters();
+loadCodex();
+loadArmoury();
 window.addEventListener('focus', () => {
   if (!document.getElementById('alliancesView').hidden) loadAlliances();
   if (!document.getElementById('charactersView').hidden) loadCharacters();
+  if (!document.getElementById('codexView').hidden) loadCodex();
+  if (!document.getElementById('armouryView').hidden) loadArmoury();
   if (!document.getElementById('mapView').hidden) loadPhases();
 });
 </script>

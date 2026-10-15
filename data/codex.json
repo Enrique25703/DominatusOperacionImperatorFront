@@ -1,0 +1,180 @@
+[
+  {
+    "id": "fase-0-llamada-armageddon",
+    "fase": 0,
+    "titulo": "La llamada de Armageddon",
+    "subtitulo": "Los últimos días antes de la Operación Imperator",
+    "categoria": "Historia principal",
+    "fecha": null,
+    "imagen": null,
+    "contenido": [
+      {
+        "tipo": "titulo",
+        "texto": "La guerra nunca terminó"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Armageddon ha conocido la guerra durante generaciones. Sus colmenas, desiertos e interminables complejos industriales todavía conservaban las cicatrices de anteriores invasiones cuando una nueva marea verde cayó sobre el planeta."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Los restos de las antiguas hordas orkas jamás habían sido completamente erradicados. Cuando el Imperium intentó purgar definitivamente su presencia, la situación cambió de forma catastrófica."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Fisuras disformes comenzaron a abrirse sobre los contaminados cielos de Armageddon. Naves orkas aparecieron alrededor del mundo y vomitaron oleada tras oleada de transportes, guerreros y máquinas de guerra sobre su superficie. A la cabeza de la nueva invasión avanzaba el Speedwaaagh! de Wazdakka Gutsmek, vanguardia de una amenaza todavía mayor."
+      },
+      {
+        "tipo": "imagen",
+        "src": "assets/40k_armageddonlore-apr21_art2wide-g3ecdfrise.jpg",
+        "alt": "Naves de guerra emergen de una fisura disforme sobre Armageddon"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Los que permanecieron"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Las fuerzas imperiales presentes en Armageddon fueron sorprendidas en mitad de sus propias operaciones. Regimientos del Astra Militarum, fuerzas mecanizadas, órdenes de las Adepta Sororitas y numerosos destacamentos imperiales quedaron aislados mientras los Orkos abrían nuevos frentes a lo largo del planeta."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Las grandes colmenas volvieron a prepararse para el asedio. Carreteras, complejos industriales, fortalezas y pasos montañosos se convirtieron en posiciones que debían mantenerse a cualquier precio."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Entre ellas se encontraban lugares que pronto adquirirían una importancia decisiva: el Archipiélago Volcanus, la Grieta de Mannheim y la Línea Morfeón."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Para los hombres y mujeres que combatían allí no existía ninguna garantía de que fueran a llegar refuerzos. Solo podían resistir. Cada hora ganada, cada carretera mantenida abierta y cada fortificación que continuase en manos imperiales podía significar la diferencia entre la supervivencia y la destrucción de Armageddon."
+      },
+      {
+        "tipo": "imagen",
+        "src": "assets/resistencia.jpg",
+        "alt": "Defensores imperiales resisten el bombardeo de una ciudad de Armageddon"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "La llamada de socorro"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "El comisario Sebastian Yarrick comprendió que las fuerzas presentes en el planeta no podrían contener indefinidamente la ofensiva."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Tras atravesar un Armageddon prácticamente colapsado por la guerra, Yarrick consiguió alcanzar un Coro Astropático desde el que transmitir una llamada de auxilio más allá de las interferencias que rodeaban el planeta."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "El mensaje abandonó Armageddon y atravesó el vacío."
+      },
+      {
+        "tipo": "destacado",
+        "texto": "**Alerta de Nivel Vermellón interceptada**, Operación Imperator ha sido autorizada, refuerzos movilizados"
+      },
+      {
+        "tipo": "imagen",
+        "src": null,
+        "alt": "Ilustración de la llamada de socorro desde Armageddon"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Operación Imperator"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Entre quienes recibieron la llamada se encontraba Marneus Calgar, Señor del Capítulo de los Ultramarines, cuya flota regresaba de combatir contra los Tiránidos."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La magnitud del desastre era evidente. Ninguna fuerza aislada podría romper el asedio de Armageddon. Para salvar el planeta sería necesario reunir una fuerza de intervención capaz de atacar simultáneamente múltiples frentes."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Durante las semanas siguientes comenzaron a concentrarse fuerzas imperiales en los sistemas próximos a Armageddon. Marines Espaciales, tropas del Astra Militarum, elementos de la Cruzada Indomitus y numerosas fuerzas de guerra respondieron a la llamada."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La contraofensiva recibió un nombre: Operación Imperator."
+      },
+      {
+        "tipo": "imagen",
+        "src": "assets/40k_operationimperatorlore-may05_art3wide-lohyjcpr1s.jpg",
+        "alt": "Fuerzas imperiales combaten entre las ruinas de Armageddon"
+      },
+      {
+        "tipo": "titulo",
+        "texto": "El Asalto Planetario"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Mientras los defensores continúan luchando sobre la superficie, una enorme fuerza imperial comienza a reunirse más allá de los cielos de Armageddon."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Naves de guerra ajustan sus órbitas. Transportes reciben las últimas coordenadas. Cápsulas de desembarco, Thunderhawks, Valkyries y naves de transporte son preparadas para el descenso."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Los comandantes estudian mapas de las zonas de guerra mientras los últimos mensajes procedentes de la superficie llegan fragmentados por las interferencias."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "La primera etapa de la Operación Imperator será un Asalto Planetario. Las fuerzas de socorro deberán atravesar las defensas enemigas, establecer nuevas cabezas de puente y contactar con las unidades imperiales que llevan semanas resistiendo sobre el planeta."
+      },
+      {
+        "tipo": "titulo",
+        "texto": "Dos ejércitos, una misma guerra"
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "En los cielos se encuentran las fuerzas de socorro. Han respondido a la llamada de Armageddon y se preparan para lanzarse sobre un planeta en guerra."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Sobre la superficie permanecen los defensores. Soldados, comandantes y tripulaciones que llevan luchando desde antes de que la Operación Imperator fuese concebida. Para ellos, la misión sigue siendo la misma: resistir hasta que aparezca ayuda en el cielo."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Los Orkos, entretanto, continúan expandiendo la guerra. El Speedwaaagh! ha abierto el camino y las hordas pieles verdes se extienden por Armageddon mientras nuevas fuerzas se aproximan al planeta."
+      },
+      {
+        "tipo": "separador"
+      },
+      {
+        "tipo": "destacado",
+        "texto": "La señal ha sido recibida."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Sobre Armageddon, las baterías antiaéreas comienzan a detectar nuevos contactos en los cielos."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Los Orkos alzan la vista."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Los defensores imperiales abandonan sus refugios para contemplar las estelas que atraviesan las nubes contaminadas."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Algunas pertenecen a naves en llamas."
+      },
+      {
+        "tipo": "parrafo",
+        "texto": "Otras, a cápsulas de desembarco."
+      },
+      {
+        "tipo": "destacado",
+        "texto": "La Operación Imperator ha comenzado."
+      },
+      {
+        "tipo": "siguienteFase",
+        "texto": "FASE 1 — ASALTO PLANETARIO"
+      }
+    ]
+  }
+]
