@@ -14,7 +14,7 @@ Abre `http://localhost:4173`. Para publicar una fase nueva, cambia su campo `vis
 
 ## Personajes
 
-Cada personaje tiene un archivo JSON en `characters/`. Añade el nombre del archivo a `characters/index.json` para mostrarlo en la pestaña **Personajes**. Los campos son `nombre`, `foto` (ruta desde la raíz de la web), `cita`, `biografia`, `alianza` (`imperial` u `orka`), `faccion`, `rango`, `batallasHistoricasPrevias` y `batallasImportantes` (ambas listas de textos). La frase aparece encima de la biografía; si `cita` está vacía, se muestra un aviso. Las batallas históricas previas recogen episodios anteriores a la campaña y `batallasImportantes` se reserva para esta campaña. La página agrupa las fichas por alianza y muestra la facción debajo del nombre. Guarda las imágenes en `characters/images/` o indica su ruta desde la raíz de la web.
+Cada personaje tiene un archivo JSON en `characters/`. Añade el nombre del archivo a `characters/index.json` para mostrarlo en la pestaña **Personajes**. Los campos son `nombre`, `foto` (ruta desde la raíz de la web), `cita`, `biografia`, `alianza` (`imperial` u `orka`), `faccion`, `rango`, `batallasHistoricasPrevias` y `batallasImportantes` (ambas listas de textos). El campo opcional `fotoPosicion` ajusta el encuadre de la miniatura con un valor CSS como `center top`. La frase aparece encima de la biografía; si `cita` está vacía, se muestra un aviso. Las batallas históricas previas recogen episodios anteriores a la campaña y `batallasImportantes` se reserva para esta campaña. La página agrupa las fichas por alianza y muestra la facción debajo del nombre. Guarda las imágenes en `characters/images/` o indica su ruta desde la raíz de la web.
 
 ## Codex
 

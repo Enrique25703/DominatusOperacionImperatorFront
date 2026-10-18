@@ -1133,6 +1133,7 @@ function renderCharacters(characters) {
         const photo = document.createElement('img');
         photo.className = 'character-photo';
         photo.src = character.foto;
+        if (character.fotoPosicion) photo.style.objectPosition = character.fotoPosicion;
         photo.alt = `Retrato de ${character.nombre}`;
         photo.loading = 'lazy';
         photo.addEventListener('error', () => photo.remove(), { once: true });

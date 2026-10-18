@@ -1,0 +1,12 @@
+{
+  "nombre": "Tempestor Prime Krugger",
+  "foto": "assets/Tempestor.png",
+  "fotoPosicion": "center top",
+  "cita": "¡Sin prisioneros!",
+  "biografia": "El Tempestor Prime Krugger comanda las fuerzas de asalto del Militarum Tempestus encomendadas a apoyar al 257.º Regimiento de Cadia. Coordina a los tempestors asignados a la misión y dirige las operaciones de asalto aerotransportado. Encabeza personalmente las incursiones más exigentes junto a su escuadra de élite, Lucifer. Sus integrantes se distinguen del resto de los Vástagos Tempestus por sus armaduras negras y los cráneos que decoran sus cascos.\n\nEl pasado de Krugger permanece oculto en los archivos sellados de la Schola Progenium. Los pocos informes disponibles mencionan campañas contra los orkos y operaciones junto a agentes del Ordo Xenos, aunque buena parte de sus objetivos y resultados siguen clasificados.\n\nEntre quienes han combatido a su lado, Krugger es conocido por su sadismo y por unas incursiones que rara vez dejan supervivientes. Su crueldad va acompañada de una disciplina absoluta: mantiene el control incluso en los asaltos más violentos y exige que cada hombre conozca su cometido antes de tocar tierra. Su capacidad para dirigir bajo fuego y cumplir misiones aparentemente inviables le ha ganado el respeto de subordinados y superiores, incluso entre los exigentes mandos del Militarum Tempestus.\n\nLa Escuadra Lucifer comparte su doctrina: golpear por sorpresa, eliminar al objetivo y abandonar la zona antes de que el enemigo pueda organizar una respuesta.",
+  "faccion": "Militarum Tempestus — 257.º de Cadia",
+  "alianza": "imperial",
+  "rango": "Tempestor Prime de los Vástagos Tempestus - Lider escuadra lucifer",
+  "batallasHistoricasPrevias": [],
+  "batallasImportantes": []
+}
