@@ -1,0 +1,14 @@
+{
+  "nombre": "Capitán Marcus Felix",
+  "foto": "assets/CapitanMarcusFelix.jpg",
+  "cita": "",
+  "biografia": "Marcus Felix, capitán de la 4.ª Compañía de los Ultramarines, es una anomalía entre los herederos de la XIII Legión. Sirvió primero como teniente a las órdenes del capitán Uriel Ventris. Durante el desastre de Hive Infernus, él y su escuadra desaparecieron. Tras tres días dados por muertos, reaparecieron sin explicación; desde entonces se les conoce como los «Inmortales de Marcus».\n\nFelix había aprendido a combatir con ataques relámpago y maniobras coordinadas al luchar junto a los Cicatrices Blancas durante la Tercera Guerra de Armageddon. Su forma de hacer la guerra, alejada de la interpretación más rígida del Codex Astartes, y la extraña supervivencia de sus Inmortales despertaron recelos entre los adeptos al Codex y la Inquisición. Marneus Calgar intercedió por ellos y, convencido del valor de sus tácticas, ascendió a Felix a capitán de la 4.ª Compañía.\n\nAhora, el Señor del Capítulo le ha confiado el mando de una pequeña fuerza relámpago para apoyar el avance del 417.º Regimiento Blindado Cadiano contra los xenos. Felix y sus Inmortales coordinan golpes rápidos con las fuerzas acorazadas: abren brechas en las posiciones enemigas y permiten que los carros cadianos prosigan el ataque antes de que el adversario pueda reorganizarse.",
+  "faccion": "Adeptus Astartes — Ultramarines",
+  "alianza": "imperial",
+  "rango": "Capitán de la 4.ª Compañía",
+  "batallasHistoricasPrevias": [
+    "Hive Infernus: desapareció junto a su escuadra y reapareció tres días después; desde entonces se les conoce como los Inmortales de Marcus.",
+    "Tercera Guerra de Armageddon: combatió junto a los Cicatrices Blancas y aprendió sus tácticas de ataque relámpago."
+  ],
+  "batallasImportantes": []
+}
